@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet"> 
+    <title>Generátor tabuľky</title>
+  </head>
+  <body>
+    <header>
+        <h1>Generátor tabuľky hodnôt</h1>
+    </header>
+    <div class="mainbody">
+      <div class="inputs" oninput="checkXY()">
+        <h2>Funkcia f()=x*y</h2>
+        <div oninput="checkX()">
+          <label for="x">Hodnota X:</label>
+          <input type="number" name="x" id="x" placeholder="1 - 9" required min="1" max="9"><br>
+          <small id="tip">Hodnota musí byť číslo v intervale od 1 po 9!</small>
+        </div>
+        <div oninput="checkY()">
+          <label for="y">Hodnota Y:</label>
+          <input type="number" name="y" id="y" placeholder="1 - 9" required min="1" max="9"><br>
+          <small id="tip2">Hodnota musí byť číslo v intervale od 1 po 9!</small>
+        </div>           
+      </div>
+      <button class="buttonResult modal-btn" id="submit" onclick="generateTable()">Zobraziť výsledok</button>
+      <div class="modal-bg">
+        <div class="modal">
+          <div id="table"></div><br>
+          <button class="buttonClose modal-close">Zavrieť</button>
+        </div>        
+      </div>      
+    </div>
+    <footer>© 2021 Martin Lauš</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
